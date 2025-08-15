@@ -8,7 +8,7 @@ FROM Books
 ORDER BY Books.title DESC;
 ```
 |title|percentage|
-|:------:|:------:|
+|:------|:------|
 |The Shining|5.660377358490|
 |The House of the Spirits|3.773584905660|
 T|he Alchemist|18.867924528301|
@@ -20,7 +20,7 @@ SELECT DISTINCT
 FROM Books;
 ```
 |genre|
-|:----:|
+|:----|
 |Adventure|
 |Drama|
 |Dystopian|
@@ -72,7 +72,7 @@ FROM Books
 WHERE Books.title LIKE 'H%L';
 ```
 |book_id|title|author_id|genre|publish_year|available_copies|language|
-|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+|:-------|:-------|:-------|:-------|:-------|:-------|:-------|
 |1|Himalayan Trail|3|Adventure|1990|3|NULL|
 |2|Harry and the Crystal|1|Fiction|2005|2|NULL|
 |5|Hotel Imperial|3|Drama|2001|1|NULL|
@@ -91,7 +91,7 @@ WHERE Authors.name NOT LIKE '%[a,e,i,o,u]'
 ```
 
 |author_id|name|birth_year|nationality|
-|:-------:|:-------:|:-------:|:-------:|
+|:-------|:-------|:-------|:-------|
 |3|Haruki Murakam|1949|Japanese|
 |5|Stephen King|1947|American|
 |6|J.K. Rowling|1965|British|
@@ -102,7 +102,7 @@ WHERE Authors.name NOT LIKE '%[a,e,i,o,u]'
 SELECT LEN('Manish Pandey') AS name_length;
 ```
 |name_length|
-|:---------:|
+|:---------|
 |13|
 
 ```sql
@@ -110,7 +110,7 @@ SELECT LEN('Manish Pandey') AS name_length;
 SELECT DATEDIFF(YEAR, '2004-11-17', GETDATE()) AS age_in_years;
 ```
 |age_in_years|
-|:---------:|
+|:---------|
 |21|
 
 ```sql
@@ -122,7 +122,7 @@ FROM Books
 GROUP BY Books.genre;
 ```
 |genre|total_books|
-|:------:|:------:|
+|:------|:------|
 |Adventure|1|
 |Drama|1|
 |Dystopian|1|
@@ -145,7 +145,7 @@ FROM Books
 GROUP BY Books.genre;
 ```
 |genre|min_copies|max_copies|avg_copies|
-|:-------:|:-------:|:-------:|:-------:|
+|:-------|:-------|:-------|:-------|
 |Adventure|3|3|3|
 |Drama|1|1|1|
 |Dystopian|7|7|7|
@@ -169,7 +169,7 @@ WHERE Books.author_id IN (
 )
 ```
 |title|
-|:---:|
+|:---|
 |Himalayan Trail|
 |Harry and the Crystal|
 |The Adventures of Sherlock Holmes|
@@ -213,7 +213,7 @@ WHERE Books.book_id = (
 );
 ```
 |title|author_name|
-|:------:|:------:|
+|:------|:------|
 |Himalayan Trail|Haruki Murakam|
 
 ```sql
@@ -231,7 +231,7 @@ ON Loans.book_id = Books.book_id
 WHERE Members.name = 'Raj';
 ```
 |loan_id|member_name|title|loan_date|
-|:-------:|:-------:|:-------:|:-------:|
+|:-------|:-------|:-------|:-------|
 |1|Raj	Himalayan Trail|2024-01|15|
 |3|Raj	The Alchemist|2024-05|01|
 |7|Raj	It|2023-05|15|
@@ -251,7 +251,7 @@ WHERE Loans.member_id IN (
 );
 ```
 |title|
-|:----:|
+|:----|
 |Harry and the Crystal|
 |Himalayan Trail|
 |It|
@@ -272,7 +272,7 @@ GROUP BY Members.name;
 ```
 
 |member_name|total_books_borrowed|
-|:---------:|:------------------:|
+|:---------|:------------------|
 |Alice|1|
 |John Doe|0|
 |Manish Pandey|4|
@@ -290,7 +290,7 @@ ON Books.book_id = Loans.book_id
 WHERE Loans.book_id IS NULL;
 ```
 |title|
-|:----:|
+|:----|
 |Hotel Imperial|
 |1984|
 |Hail to the Rebel|
