@@ -75,8 +75,12 @@ INSERT INTO Player VALUES
 ```sql
 
 -- FOR 15th query
-INSERT INTO Team VALUES
+INSERT INTO Stadium VALUES
+(2, 'MOTERA', 'AHMDADBAD', 13200);
+
+INSERT INTO Team VALUE
 (1, 'Mumbai Indians', 'Mahela Jayawardene', 120, 200, 2);
+
 INSERT INTO Player VALUES
 (2, 'Rohit', 'Sharma', 1, 'Batsman', 45, 230),
 (9, 'Ishan', 'Kishan', 1, 'Wicketkeeper', 23, 120);
